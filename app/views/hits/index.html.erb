@@ -1,0 +1,6 @@
+<h1>Website Hits</h1>
+
+<%= @hits.each do |hit| %>
+	<%= hit.created_at %>
+	<%= hit.uri %>
+<% end %>
