@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   
+  get 'static_pages/Signin'
+
     root                  'static_pages#home'
     get                   'static_pages/about'
+    get                   'static_pages/sign_in'
+    get                   'hits/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  
+    resources :hits
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,8 +20,8 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :hits, only: [:index]
-    get   '/one_pixel_image_hit' =>  'hits#one_pixel_image_hit'
+    # resources :hits, only: [:index]
+    # get   '/one_pixel_hit.gif' =>  'hits#one_pixel_hit'
 
   # Example resource route with options:
   #   resources :products do

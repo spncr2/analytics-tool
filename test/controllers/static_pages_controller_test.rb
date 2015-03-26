@@ -11,4 +11,9 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get sign in" do
+    get :sign_in
+    assert_response :success
+  end
+
 end
